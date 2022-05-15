@@ -1,8 +1,11 @@
 class ButtonHandler {
+    val = 0;
     static plus() {
-        console.log("+");
+        val += 1;
+        console.log(val);
     }
     static minus(){
-        console.log("-");
+        val -= 1;
+        console.log(val);
     }
  }
