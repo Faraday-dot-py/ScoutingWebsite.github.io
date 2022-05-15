@@ -6,7 +6,7 @@ class ButtonHandler {
         val += 1;
         console.log(this.getVal());
     }
-    
+
     static minus(){
         val -= 1;
         console.log(this.getVal());
