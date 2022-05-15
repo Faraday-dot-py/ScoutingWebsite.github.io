@@ -1,11 +1,18 @@
+var val = 0;
+
 class ButtonHandler {
-    val = 0;
+    
     static plus() {
         val += 1;
-        console.log(val);
+        console.log(this.getVal());
     }
+    
     static minus(){
         val -= 1;
-        console.log(val);
+        console.log(this.getVal());
+    }
+
+    static getVal(){
+      return val;
     }
  }
