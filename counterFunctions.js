@@ -1,18 +1,16 @@
-var val = 0;
+var val = setInterval(function() {
+    document.getElementById("val").innerHTML = getVal();
+},10);
 
-class ButtonHandler {
-    
-    static plus() {
-        val += 1;
-        console.log(this.getVal());
-    }
 
-    static minus(){
-        val -= 1;
-        console.log(this.getVal());
-    }
-
-    static getVal(){
-      return val;
-    }
- }
+function getVal(){
+    return val;
+}
+function plus() {
+    val += 1;
+    console.log(getVal());
+}
+function minus(){
+    val -= 1;
+    console.log(getVal());
+}

@@ -1,11 +1,15 @@
-<script type="text/javascript" src=".\counterFunctions.js"></script>
+<script type="text/javascript" src=".\counterFunctions.js">
+    document.getElementById('val').innerHTML = "" ;
+</script>
 <!DOCTYPE html>
 <html>
 <body>
 
 <p>Increase counter</p>
-<button type="button" onclick="ButtonHandler.plus()">+</button>
-<button type="button" onclick="ButtonHandler.minus()">-</button>
+<button type="button" onclick="plus()">+</button>
+<button type="button" onclick="minus()">-</button>
+
+<div id="val"></div>
 
 </body>
 </html>
