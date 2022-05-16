@@ -1,14 +1,54 @@
-<script type="text/javascript" src=".\counterFunctions.js">
-</script>
+<script type="text/javascript" src=".\counterFunctions.js"></script>
 <!DOCTYPE html>
 <html>
 <body>
 
+<form method="POST" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/7xfdwbw2790pv">
 <p>Increase counter</p>
 <button type="button" onclick="plus()">+</button>
 <button type="button" onclick="minus()">-</button>
 
-<div id="val"></div>
+
+
+<label name="data[count]"><div id="val" name="count"></div></label>
+
+<input type="radio" name="data[option1]" /> : option1 <br />
+<input type="radio" name="data[option2]" /> : option2 <br />
+
+<label for="options">Choose a option:</label>
+<select name="data[options]" id="options" required="required">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+
+    <br>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="data[fname]" required="required"><br>
+    <label for="lname" required="required">Last name:</label><br>
+    <input type="text" id="lname" name="data[lname]"><br>
+
+    <input type="submit" onclick="SubForm()" value="Submit">
+</form>
+
+<script>
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        // you can put any JS code here
+        alert('success')
+      });
+    });
+  </script>
+
 
 </body>
 </html>
