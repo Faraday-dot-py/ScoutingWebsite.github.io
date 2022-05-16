@@ -1,7 +1,8 @@
-var val = setInterval(function() {
-    document.getElementById("val").innerHTML = getVal();
-},100);
-minus();
+var val = 0;
+
+function updateVal(){
+    val = document.getElementById("val").innerHTML = getVal();
+}
 
 function getVal(){
     console.log(val);

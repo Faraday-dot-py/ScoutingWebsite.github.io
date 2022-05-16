@@ -6,12 +6,12 @@
 <form method="POST" id="sheetdb-form"
   action="https://sheetdb.io/api/v1/7xfdwbw2790pv">
 <p>Increase counter</p>
-<button type="button" onclick="plus()">+</button>
-<button type="button" onclick="minus()">-</button>
+<button type="button" onclick="plus(), updateVal()">+</button>
+<button type="button" onclick="minus(), updateVal()">-</button>
 
+<div id="val" name="count">0</div>
 
-
-<label name="data[count]"><div id="val" name="count"></div></label>
+<input type = "hidden" name = "data[count]" value = {val} />
 
 <input type="radio" name="data[option1]" /> : option1 <br />
 <input type="radio" name="data[option2]" /> : option2 <br />
