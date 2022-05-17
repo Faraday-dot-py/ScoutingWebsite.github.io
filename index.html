@@ -3,52 +3,37 @@
 <html>
 <body>
 
-<form method="POST" id="sheetdb-form"
-  action="https://sheetdb.io/api/v1/7xfdwbw2790pv">
-<p>Increase counter</p>
-<button type="button" onclick="plus(), updateVal()">+</button>
-<button type="button" onclick="minus(), updateVal()">-</button>
+<form 
+  method="POST" id="sheetdb-form"
+  action="https://api.sheetmonkey.io/form/bZaV4JLJcXSKc22WapwHgC"
+>
+  <p>Increase counter</p>
+  <button type="button" onclick="plus(), updateVal()">+</button>
+  <button type="button" onclick="minus(), updateVal()">-</button>
 
-<div id="val" name="count">0</div>
+  <div id="val">0</div>
 
-<input type = "hidden" name = "data[count]" value = {val} />
+  <input type="hidden" id="test" name="count"></input>
+  <input type="radio" name="option1" /> : option1 <br />
+  <input type="radio" name="option2" /> : option2 <br />
 
-<input type="radio" name="data[option1]" /> : option1 <br />
-<input type="radio" name="data[option2]" /> : option2 <br />
+  <label for="options">Choose a option:</label>
+  <select name="options" required="required">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    
+  </select>
 
-<label for="options">Choose a option:</label>
-<select name="data[options]" id="options" required="required">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
+  <br>
+  <input type="text" name="fname" required="required" placeholder="First Name"><br>
+  <input type="text" name="lname" required="required" placeholder="Last Name"><br>
+  
+  <input type="hidden" name="date" value="x-sheetmonkey-current-date-time"/>
 
-    <br>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="data[fname]" required="required"><br>
-    <label for="lname" required="required">Last name:</label><br>
-    <input type="text" id="lname" name="data[lname]"><br>
-
-    <input type="submit" onclick="SubForm()" value="Submit">
+  <button type="submit">Send</button>
 </form>
-
-<script>
-    var form = document.getElementById('sheetdb-form');
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      fetch(form.action, {
-          method : "POST",
-          body: new FormData(document.getElementById("sheetdb-form")),
-      }).then(
-          response => response.json()
-      ).then((html) => {
-        // you can put any JS code here
-        alert('success')
-      });
-    });
-  </script>
-
 
 </body>
 </html>
