@@ -1,5 +1,1 @@
-text input
-
-label
-
-https://api.apispreadsheets.com/data/sB59VyMceEabk5HE/
+testString, 69420, 69.69

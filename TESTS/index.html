@@ -1,0 +1,33 @@
+<head>
+  <title>Read Text File</title>
+</head>
+
+<body>
+ 
+  <button type="button" onclick="" id="mainButton">Get File</button>
+  <script>
+    let btn = document.getElementById("mainButton");
+
+    btn.addEventListener("clock", event=>{
+      readSettings();
+    })
+
+    function readSettings(){
+    var fr = new FileReader();
+
+    fr.readAsText("C:\\Users\\adame\\Github_Repositories\\ScoutingWebsite.github.io\\settings.txt");
+
+    reader.onload = function() {
+      console.log(reader.result);
+    };
+
+    reader.onerror = function() {
+      console.log(reader.error);
+    };
+    }
+  </script>
+    
+  
+</body>
+
+</html>
