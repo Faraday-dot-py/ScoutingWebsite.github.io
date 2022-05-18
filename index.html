@@ -5,15 +5,14 @@
 
 <form 
   method="POST" id="sheetdb-form"
-  action="https://api.sheetmonkey.io/form/bZaV4JLJcXSKc22WapwHgC"
+  action="https://script.google.com/macros/s/AKfycbyYDAaF7vd9Vfj9-sHXjSyTwXHFkZDjFYAp3zsIVyQbwKxHz6o3JONQZ-qcSfJM7D50oQ/exec"
 >
   <p>Increase counter</p>
   <button type="button" onclick="plus(), updateVal()">+</button>
   <button type="button" onclick="minus(), updateVal()">-</button>
 
-  <div id="val">0</div>
+  <div id="val" name="count">0</div>
 
-  <input type="hidden" id="test" name="count"></input>
   <input type="radio" name="option1" /> : option1 <br />
   <input type="radio" name="option2" /> : option2 <br />
 
@@ -29,8 +28,6 @@
   <br>
   <input type="text" name="fname" required="required" placeholder="First Name"><br>
   <input type="text" name="lname" required="required" placeholder="Last Name"><br>
-  
-  <input type="hidden" name="date" value="x-sheetmonkey-current-date-time"/>
 
   <button type="submit">Send</button>
 </form>
