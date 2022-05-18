@@ -10,11 +10,13 @@
   <p>Increase counter</p>
   <button type="button" onclick="plus(), updateVal()">+</button>
   <button type="button" onclick="minus(), updateVal()">-</button>
+  <br />
+  
+  <input type="text" id="val" name="count" placeholder="0" readonly/>
+  <br />
 
-  <div id="val" name="count">0</div>
-
-  <input type="radio" name="option1" /> : option1 <br />
-  <input type="radio" name="option2" /> : option2 <br />
+  <input type="radio" name="optionRadio" value="1"/> : 1 <br />
+  <input type="radio" name="optionRadio" value="2"/> : 2 <br />
 
   <label for="options">Choose a option:</label>
   <select name="options" required="required">

@@ -1,7 +1,7 @@
 var val = 0;
 
 function updateVal(){
-    val = document.getElementById("val").innerHTML = getVal();
+    val = document.getElementById("val").value = getVal();
 }
 
 function getVal(){
