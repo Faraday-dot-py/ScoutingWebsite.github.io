@@ -8,8 +8,14 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open index.html Jacob",
+            "name": "Open test.html Jacob",
             "file": "c:\\Users\\Jacob Hotz\\Documents\\GitHub\\ScoutingWebsite.github.io\\index.html"
+        },
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Open index.html Jacob",
+            "file": "c:\\Users\\Jacob Hotz\\Documents\\GitHub\\ScoutingWebsite.github.io\\test.html"
         }
     ]
 }
