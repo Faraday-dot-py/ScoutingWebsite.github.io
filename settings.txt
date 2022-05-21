@@ -1,3 +1,7 @@
-{button}:Random Text
+button; text: + : increment: true
+button; text: + : increment: true
+button; text: Hello : increment: false
+button; text: - : increment: true
+counter: counter
 stuff
 blueberries
