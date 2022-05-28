@@ -14,7 +14,7 @@ function getElements(foo) {
         createButtonElem(element, text, onClick);
     }
     if(element[0] === "radio"){
-        createRatio(element);
+        createRatioElem(element);
     }
 //    if(element[0] === "counter"){
 //        console.log("THIS IS TOTALLY A COUNTER");
@@ -22,7 +22,8 @@ function getElements(foo) {
 //    }
 }
 
-function createRatio(elemArray, radioText) {
+function createRatioElem(elemArray) {
+    var radioText;
     let params = elemArray[1].split(":");
     replaceSpaces(params);
     for(let i=0; i<params.length; i++) {
@@ -31,6 +32,11 @@ function createRatio(elemArray, radioText) {
             console.log(radioText);
         }
     }
+    var form = document.getElementById('form');
+    form.appendChild(newLine);
+    radioText.forEach(text => {
+        createRatio(text);
+    });
     //WORK ON RADIO (CREATE RADIO FUNCTION)
 }
 function createButtonElem(elemArray, text, onClick) {
@@ -86,14 +92,13 @@ function createButtonOther(text) {
 }
 function createRatio(text){
     var labelValue = document.createElement('label');
-    labelValue.innerHTML = text;
+    labelValue.innerHTML = " : " + text;
     var inputValue = document.createElement('input');
     inputValue.type = "radio";
-    inputValue.name = text;
+    inputValue.name = "text";
     var form = document.getElementById('form');
-    form.appendChild(newLine);
-    form.appendChild(labelValue);
     form.appendChild(inputValue);
+    form.appendChild(labelValue);
 }
 
 function minusFunc(){
