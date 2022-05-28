@@ -1,8 +1,4 @@
 var val = 0;
-var val2 = 0;
-var val3 = 0;
-var val4 = 0;
-var val5 = 0;
 
 
 function updateVal(){
