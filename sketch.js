@@ -1,7 +1,7 @@
-var txt
+var txt;
 
 function preload() {
-  txt = loadStrings("settings.txt");
+    txt = loadStrings("settings.txt");
 }
 
 function getElements(foo) {
@@ -82,13 +82,9 @@ function replaceSpaces(array) {
     }
 }
 
-function setup() {
-  noCanvas();
-  txt.forEach(elementRaw => {
-      getElements(elementRaw);
-  });
+function setup(){
+    noCanvas();
+    txt.forEach(elementRaw => {
+        getElements(elementRaw);
+    });
 }
-
-// function draw() {
-//   background(220);
-// }
