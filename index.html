@@ -1,42 +1,48 @@
-<script language="javascript" type="text/javascript"
-src="libraries/p5.js"></script>
-<script src="sketch.js"></script>
-<script type="text/javascript" src=".\counterFunctions.js"></script>
-
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<form
-  method="POST" id="form"
-  action="https://script.google.com/macros/s/AKfycbyYDAaF7vd9Vfj9-sHXjSyTwXHFkZDjFYAp3zsIVyQbwKxHz6o3JONQZ-qcSfJM7D50oQ/exec"
->
-  <p>Increase counter</p>
-  <button type="button" onclick="plus(), updateVal()">+</button>
-  <button type="button" onclick="minus(), updateVal()">-</button>
-  <br />
+    <title>Sketch</title>
 
-  <input type="text" id="val" name="count" placeholder="0" readonly/>
-  <br />
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-  <input type="radio" name="optionRadio" value="1"/> : 1 <br />
-  <input type="radio" name="optionRadio" value="2"/> : 2 <br />
+    <script src="libraries/p5.min.js"></script>
+    <script src="counterFunctions.js"></script>
+  </head>
 
-  <label for="options">Choose a option:</label>
-  <select id="options" name="options" required="required">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
+  <body>
+    <script src="sketch.js"></script>
+    <form
+    method="POST" id="form"
+    action="https://script.google.com/macros/s/AKfycbyYDAaF7vd9Vfj9-sHXjSyTwXHFkZDjFYAp3zsIVyQbwKxHz6o3JONQZ-qcSfJM7D50oQ/exec"
+  >
+    <p>Increase counter</p>
+    <button type="button" onclick="plus(), updateVal()">+</button>
+    <button type="button" onclick="minus(), updateVal()">-</button>
+    <br />
 
-  </select>
+    <input type="text" id="val" name="count" placeholder="0" readonly/>
+    <br />
 
-  <br>
-  <input type="text" name="fname" required="required" placeholder="First Name"><br>
-  <input type="text" name="lname" required="required" placeholder="Last Name"><br>
+    <input type="radio" name="optionRadio" value="1"/> : 1 <br />
+    <input type="radio" name="optionRadio" value="2"/> : 2 <br />
 
-  <button type="submit">Send</button>
-</form>
+    <label for="options">Choose a option:</label>
+    <select id="options" name="options" required="required">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
 
-</body>
+    </select>
+
+    <br>
+    <input type="text" name="fname" required="required" placeholder="First Name"><br>
+    <input type="text" name="lname" required="required" placeholder="Last Name"><br>
+
+    <button type="submit">Send</button>
+  </form>
+  </body>
 </html>

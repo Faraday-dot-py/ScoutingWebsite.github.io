@@ -2,7 +2,6 @@ button; text: + : increment: true
 button; text: + : increment: true
 button; text: Hello : increment: false
 button; text: - : increment: true
-counter;
-radio; options: 1 ball, 2 balls, 3 balls
+counter: counter
 stuff
 blueberries
