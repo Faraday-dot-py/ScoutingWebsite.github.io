@@ -1,3 +1,9 @@
 
 button(+, count, up)
 button(-, count, down)
+
+button(+, side, up)
+button(-, side, down)
+
+button(+, rim, up)
+button(-, rim, down)

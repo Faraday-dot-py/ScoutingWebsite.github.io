@@ -8,25 +8,19 @@ function getParams(rawElement)
 {   
     if (rawElement.length != 0)
     {let element 
-        = rawElement.replace(
-            /\s/g,'')
+        = rawElement.replace(/\s/g,'')
 
         element = 
         element.substring(
-            0, element.length - 1
-            )
+            0, element.length - 1)
 
         // console.log("elem:" + element)
         
         element =
-        element.split(
-            "("
-            )
+        element.split("(")
         
         params = 
-        element[1].split(
-            ","
-            )
+        element[1].split(",")
         
         // console.log("params:" + params, "elem:" + element)
         return params}else{return ''}
@@ -50,11 +44,25 @@ function setup(){
     
     });
     
+    buttonEffects = []
     buttonList.forEach(element => 
     {
-        console.log("List:" + element)
         button = createButton(element[0])
-        
+        console.log(buttonEffects)
+        console.log(element[1])
+        if(element.length > 1 && !buttonEffects.includes(element[1]))
+        {
+            buttonEffects.push(element[1])
+        }
+    })
+
+    buttonEffects.forEach(element => 
+    {
+        console.log(element)
+        inp = createInput('', 'text')
+        inp.attribute('id', element)
+        inp.attribute('readonly', true)
+        inp.attribute('placeholder', '0')
     })
 }
 
