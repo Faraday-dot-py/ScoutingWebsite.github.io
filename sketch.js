@@ -29,38 +29,41 @@ function getParams(rawElement)
 function setup(){
     noCanvas();
     
-    let buttonList = []
+    let buttonParams = []
     
     txt.forEach(elementRaw => 
     {
         if(getParams(elementRaw) != '')
         {
-            buttonList.push(
+            buttonParams.push(
                 getParams(elementRaw)
                 )
         }
-        // console.log("elementRaw:" + elementRaw)
-        // console.log("Params:" + getParams(elementRaw))
+        console.log("elementRaw:" + elementRaw)
+        console.log("Params:" + getParams(elementRaw))
     
     });
-    
-    buttonEffects = []
-    buttonList.forEach(element => 
+
+    buttonValue = []
+    buttonText = []
+    buttonParams.forEach(element => 
     {
-        button = createButton(element[0])
-        console.log(buttonEffects)
-        console.log(element[1])
-        if(element.length > 1 && !buttonEffects.includes(element[1]))
+        buttonText.push(element[0])
+        if(element.length > 1 && !buttonValue.includes(element[1]))
         {
-            buttonEffects.push(element[1])
+            buttonValue.push(element[1])
         }
     })
 
-    buttonEffects.forEach(element => 
+    buttonText.forEach(text =>
     {
-        console.log(element)
+        button = createButton(text[0])
+    })
+
+    buttonValue.forEach(variable => 
+    {
         inp = createInput('', 'text')
-        inp.attribute('id', element)
+        inp.attribute('id', variable)
         inp.attribute('readonly', true)
         inp.attribute('placeholder', '0')
     })
