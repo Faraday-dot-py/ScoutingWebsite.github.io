@@ -39,8 +39,8 @@ function setup(){
                 getParams(elementRaw)
                 )
         }
-        console.log("elementRaw:" + elementRaw)
-        console.log("Params:" + getParams(elementRaw))
+        // console.log("elementRaw:" + elementRaw)
+        // console.log("Params:" + getParams(elementRaw))
     
     });
 
